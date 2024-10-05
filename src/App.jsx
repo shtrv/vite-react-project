@@ -5,13 +5,22 @@ import './App.css'
 import Header from './components/Header'
 import Button from './components/Button'
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0)
+  const [tabContent, setTabContent] = useState('')
 
+  function handleClick(type) {
+    setTabContent(type)
+    console.log('clicked', type)
+  }
+  
   return (
     <>
       <Header></Header>
-      <Button></Button>
+      <Button onClick={() => handleClick('description')}>Описание</Button>
+      <Button onClick={() => handleClick('stats')}>Статистика</Button>
+      <Button onClick={() => handleClick('adbout')}>Обо мне</Button>
+      <p>{tabContent}</p>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -29,5 +38,3 @@ function App() {
     </>
   )
 }
-
-export default App
