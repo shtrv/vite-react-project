@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/header/Header'
 import Button from './components/button/Button'
+import Card from './components/card/card'
+import dataA from './dataA.json'
 
 export default function App() {
-  const [count, setCount] = useState(0)
-  const [tabContent, setTabContent] = useState('')
+  //const [count, setCount] = useState(0)
+  const [tabContent, setTabContent] = useState(null)
 
   function handleClick(type) {
     setTabContent(type)
@@ -17,24 +17,19 @@ export default function App() {
   return (
     <>
       <Header></Header>
-      <Button onClick={() => handleClick('description')}>Описание</Button>
-      <Button onClick={() => handleClick('stats')}>Статистика</Button>
-      <Button onClick={() => handleClick('adbout')}>Обо мне</Button>
-      <p>{tabContent}</p>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <Button isActive={tabContent === 'description'} onClick={() => handleClick('description')}>Описание</Button>
+      <Button isActive={tabContent === 'stats'} onClick={() => handleClick('stats')}>Статистика</Button>
+      <Button isActive={tabContent === 'adbout'} onClick={() => handleClick('adbout')}>Обо мне</Button>
+      {tabContent ? (
+        <p>{tabContent}</p>
+        ) : (
+        <p>nothing here</p>
+        )}
+      <ul>
+        {dataA.map((data) => (
+          <Card {...data} />
+          ))}
+      </ul>
     </>
   )
 }
