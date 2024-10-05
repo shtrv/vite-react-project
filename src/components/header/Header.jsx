@@ -1,13 +1,17 @@
+import { useState } from 'react';
 import Butterfly from '/Butterfly.jpg'
 
-const Now = new Date().toLocaleTimeString();
 
 export default function Header() {
+    const [now, setNow] = useState(new Date())
+
+    setInterval(() => setNow(new Date()), 1000)
+
     return (
         <header> 
         <img src={Butterfly} className="logo Butterfly" alt="Butterfly" />
         <h3>shtrv</h3>
-        <span>{Now}</span>
+        <span>{now.toLocaleTimeString()}</span>
         </header>
     )
 }
