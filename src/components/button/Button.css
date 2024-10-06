@@ -14,12 +14,11 @@ button:hover {
   border-color: #646cff;
 }
 
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
-button:active {
-    background: #097183;
-    color: #fff;
+button.active {
+    background-color: #097183;
 }
