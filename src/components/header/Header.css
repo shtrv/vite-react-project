@@ -1,0 +1,22 @@
+header {
+    background-color: rgba(71, 61, 139, 0.199);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.logo.Butterfly {
+    padding: 0px;
+    max-height: 50px;
+}
+
+h3 {
+    height: auto;
+    margin: auto;
+}
+
+span {
+    height: auto;
+    padding-right: 1rem;
+}
