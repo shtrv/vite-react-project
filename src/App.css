@@ -1,7 +1,7 @@
 main {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -42,4 +42,10 @@ main {
 
 .read-the-docs {
   color: #888;
+}
+
+.tabsSection {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
