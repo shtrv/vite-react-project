@@ -26,7 +26,7 @@ export default function App() {
         {tab === "main" && <MainSection></MainSection>}
 
         {tab === "description" && (
-          <ul style = {{ margin: '1rem' }}>
+          <ul style = {{ margin: '1rem'}}>
             {dataA.map((data) => (
               <Card {...data} />
             ))}
