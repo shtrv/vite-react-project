@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
-import Card from "./components/card/card";
+import Card from "./components/card/Card";
 import dataA from "./dataA.json";
 import TabsSection from "./components/TabsSection";
 import MainSection from "./components/MainSection";
