@@ -1,7 +1,5 @@
-import { useState } from "react";
 import "./Header.css";
 import Butterfly from "/Butterfly.jpg";
-import TabsSection from "../TabsSection";
 
 export default function Header() {
 
